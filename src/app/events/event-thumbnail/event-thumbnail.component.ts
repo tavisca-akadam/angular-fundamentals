@@ -8,8 +8,4 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class EventThumbnailComponent {
     @Input() event: any;
-    someProperty: any = "some value";
-    logfoo() {
-        console.log('foo');
-    }
 }
