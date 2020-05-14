@@ -3,11 +3,14 @@
     <div>{{event?.date}}</div>
     <div>{{event?.time}}</div>
     <div>${{event?.price}}</div>
-    <div>
+    <div *ngIf="event?.location">
         <span>Location: {{event?.location?.address}}</span>
         <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
     </div>
+    <div *ngIf="event?.onlineUrl">
+        <span>Online URL: {{event?.onlineUrl}}</span>
+    </div>
     <div>
-        <img [src]="event?.imageUrl" alt="avatar" height="100" width="80" />
+        <img [src]=" event?.imageUrl" alt="avatar" height="100" width="80" />
     </div>
 </div>
